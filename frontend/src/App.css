@@ -1,0 +1,503 @@
+
+body, html {
+  height: 100%;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  opacity: 1;
+}
+h1{
+  text-align: center;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+.bg-img {
+  /* The image used */
+  background-image: url('https://getwallpapers.com/wallpaper/full/1/9/7/1267872-movie-poster-wallpaper-1920x1080-for-samsung-galaxy.jpg');
+
+  min-height: 720px;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+
+/* Add styles to the form container */
+.container {
+  position:absolute;
+  top: 20%;
+  right: 35%;
+  margin: 20px;
+  max-width: 300px;
+  padding: 16px;
+  background-color: #BFCFE7;
+  opacity: 85%;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password], input[type=number], input[type=date] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #FAEED1;
+  opacity: 1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+  opacity: 1;
+}
+
+/* Set a style for the submit button */
+.btn {
+  background-color: #11235A;
+  color: white;
+  padding: 16px 20px;
+  margin: 3px 0 10px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: .9;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+.movie-img {
+  height: 280px;
+  width: 200px;
+}
+
+
+.btn-shows{
+  display: block;
+  margin: 5px auto 0 auto;
+  padding: 5px;
+  border-radius: 15px;
+  border: none;
+  width: 90%;
+  height: 30px;
+  background-color: #3D0C11 ;
+  color: white;
+  }
+.btn-shows:hover{
+  background-color: #6D2932;
+  color: white;
+}
+
+.btn-review{
+  display: block;
+  margin: 5px auto;
+  padding: 5px;
+  border-radius: 15px;
+  border: none;
+  width: 90%;
+  height: 30px;
+  background-color: #3D0C11;
+  color: white;
+}
+.btn-review:hover{
+  background-color: #6D2932;
+  color: white;
+}
+.btn-details{
+  display: block;
+  margin: 10px auto 5px auto;
+  padding: 5px;
+  border-radius: 15px;
+  border: none;
+  width: 90%;
+  height: 30px;
+  background-color: #3D0C11;
+  color: white;
+}
+.btn-details:hover{
+  background-color: #6D2932;
+  color: white;
+}
+
+.btn-book{
+  display: block;
+  margin: 5px auto 0 auto;
+  padding: 5px;
+  border-radius: 15px;
+  border: none;
+  width: 10%;
+  height: 30px;
+  background-color: #3D0C11 ;
+  color: white;
+}
+.btn-book:hover{
+  background-color: #6D2932;
+  color: white;
+}
+
+.movie-details .image-container{
+  align-items: center;
+}
+
+.movie-details .image-container img{
+  width: 20%;
+  height: 20%;
+}
+
+.show-tile-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 50px;
+  padding: 35px 70px;
+}
+
+.show-tile-container .select-show-btn{
+  display: block;
+  padding: 5px;
+  border-radius: 15px;
+  border: none;
+  width: 50%;
+  height: 30px;
+  background-color: #3D0C11;
+  color: white;
+  margin: 10px auto;
+  cursor: pointer;
+}
+
+.show-tile-container .select-show-btn:hover{
+  background-color: #6D2932;
+  color: white;
+}
+
+
+.show-tile{
+  border: 1px solid #3D0C11;
+  text-align: center;
+}
+
+.seat-container{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 7%;
+  padding: 80px 100px;
+}
+
+.seat-container .seat-vacant{
+  width: 3%;
+  cursor: pointer;
+  background-color: green;
+  color: white;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border: 1px solid black;
+  margin: 20px 0;
+  text-align: center;
+}
+.seat-container .seat-booked{
+  width: 3%;
+  cursor: pointer;
+  color: white;
+  background-color: #3D0C11;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border: 1px solid black;
+  margin: 20px 0;
+  text-align: center;
+}
+.seat-container .seat-selected{
+  cursor: pointer;
+  width: 3%;
+  color: black;
+  background-color: yellow;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border: 1px solid black;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.screen {
+  border: 1px solid #3D0C11;
+  width: 90%;
+  height: 20px;
+  margin: 20px auto;
+  text-align: center;
+}
+.seats-container{
+  padding-bottom: 10px;
+  align-items: center;
+}
+
+.booking-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr ;
+  gap: 50px;
+  padding: 20px;
+}
+
+.booking-container .booking-card{
+  text-align: center;
+}
+.booking-container .booking-card .booking-img img{
+  width: 100%;
+}
+
+.booking-container .booking-card .btn-get-booking{
+  display: block;
+  margin: 10px auto 5px auto;
+  padding: 5px;
+  border-radius: 15px;
+  border: none;
+  width: 50%;
+  height: 30px;
+  background-color: #3D0C11;
+  color: white;
+}
+
+.booking-container .booking-card .btn-get-booking:hover{
+  background-color: #6D2932;
+  color: white;
+}
+
+.movie-booking-container {
+  text-align: center;
+  padding: 10%;
+}
+
+.movie-booking-container .movie-img-container img {
+    width: 30%;
+}
+
+
+.review-container{
+  text-align: center;
+  width: 70%;
+  margin: 10px auto;
+
+}
+
+.review-container .form-container{
+  display: flex;
+  flex-direction: column;
+}
+.review-container .form-container .add-review-input {
+  text-align: center;
+  height: 100px;
+  padding: 5px 20px;
+}
+
+.review-container .form-container .add-review-btn {
+  display: block;
+  margin: 10px auto 5px auto;
+  padding: 5px;
+  border-radius: 15px;
+  border: none;
+  width: 10%;
+  height: 30px;
+  background-color: #3D0C11;
+  color: white;
+}
+
+.review-container .form-container .add-review-btn:hover{
+  background-color: #6D2932;
+  color: white;
+}
+
+.admin-dashboard .add-movie{
+  margin: 15px auto ;
+  display: block;
+  padding: 5px;
+  border-radius: 15px;
+  border: none;
+  width: 15%;
+  height: 30px;
+  background-color: #3D0C11;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+}
+
+.admin-dashboard  .add-movie:hover{
+  background-color: #6D2932;
+  color: white;
+}
+
+.movie-card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+.movie-card-container .movie-card{
+ text-align: center;
+ background-color: antiquewhite;
+}
+
+.movie-card-container .movie-card .image{
+  height: 300px;
+  width: 240px;
+}
+
+.movie-card-container .movie-card .movie-name{
+  font-size: large;
+}
+
+.movie-card-container .movie-card .edit-movie, .movie-card-container .movie-card .shows{
+  margin: 5px auto;
+  display: block;
+  padding: 5px;
+  border-radius: 15px;
+  border: none;
+  width: 50%;
+  height: 30px;
+  background-color: #3D0C11;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+}
+
+.movie-card-container .movie-card .edit-movie:hover, .movie-card-container .movie-card .shows:hover{
+  background-color: #6D2932;
+  color: white;
+}
+
+
+
+.add-movie-container{
+  text-align: center;
+  width: 70%;
+  margin: 10px auto; 
+}
+
+.add-movie-container .page-title{
+  text-align: center;
+
+}
+
+.add-movie-container .add-movie-form .add-movie-btn {
+  display: block;
+  padding: 5px;
+  border-radius: 15px;
+  border: none;
+  width: 20%;
+  height: 30px;
+  background-color: #3D0C11;
+  color: white;
+  margin: 2px auto;
+  cursor: pointer;
+}
+
+.add-movie-container .add-movie-form .add-movie-btn:hover {
+  
+  background-color: #6D2932;
+  color: white;
+}
+
+.edit-movie-container {
+  text-align: center;
+  margin: 10px auto;
+  width: 70%
+}
+
+.edit-movie-container .edit-movie-form .edit-movie-btn, .edit-movie-container .delete-movie-btn{
+  display: block;
+  padding: 5px;
+  border-radius: 15px;
+  border: none;
+  width: 20%;
+  height: 30px;
+  background-color: #3D0C11;
+  color: white;
+  margin: 5px auto;
+  cursor: pointer;
+}
+
+.edit-movie-container .edit-movie-form .edit-movie-btn:hover, .edit-movie-container .delete-movie-btn:hover{
+  background-color: #6D2932;
+  color: white;
+}
+
+.add-show-container{
+  text-align: center;
+  width: 70%;
+  margin: 10px auto;
+}
+
+.add-show-container .add-show-form .add-show-btn{
+  display: block;
+  padding: 5px;
+  border-radius: 15px;
+  border: none;
+  width: 20%;
+  height: 30px;
+  background-color: #3D0C11;
+  color: white;
+  margin: 5px auto;
+  cursor: pointer;
+}
+
+.add-show-container .add-show-form .add-show-btn:hover{
+  background-color: #6D2932;
+  color: white;
+}
+
+.show-container .add-show{
+  display: block;
+  padding: 5px;
+  border-radius: 15px;
+  border: none;
+  width: 20%;
+  height: 30px;
+  background-color: #3D0C11;
+  color: white;
+  margin: 20px auto;
+  cursor: pointer;
+}
+
+.show-container .add-show:hover{
+  background-color: #6D2932;
+  color: white;
+}
+
+.show-container .delete-show-btn{
+  display: block;
+  padding: 5px;
+  border-radius: 15px;
+  border: none;
+  width: 50%;
+  height: 30px;
+  background-color: #3D0C11;
+  color: white;
+  margin: 10px auto;
+  cursor: pointer;
+}
+
+.show-container .delete-show-btn:hover{
+  background-color: #6D2932;
+  color: white;
+}
+
+.rating-container{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 25px;
+}
+
+.rating-container .radio{
+  display: none;
+}
+
+.rating-container .rating{
+  cursor: pointer;
+}
+
+.admin-movie-list-container h4{
+  text-align: center;
+}
+
+
